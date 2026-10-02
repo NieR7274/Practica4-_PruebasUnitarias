@@ -66,6 +66,16 @@ def test_caso_Frontera_61_Minutos(sistema):
     # Assert
     assert resultado == 35.00
 
+def test_caso_Frontera_120_Minutos(sistema):
+    # Arrege
+    minutos = 120
+
+    # Act
+    resultado = sistema.calcular_total(minutos, "normal", False)
+
+    # Assert
+    assert resultado == 35.00
+
 # 3. Agregue entradas inválidas con pytest.raises.
 
 def test_excepcion_Entrada_decimal(sistema):
