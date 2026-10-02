@@ -23,6 +23,17 @@ def test_caso_Boleto_Perdido(sistema):
     # Assert
     assert resultado == 300.00
 
+def test_caso_Cero_Minutos(sistema):
+
+    # Arrege
+    minutos = 0
+
+    # Act
+    resultado = sistema.calcular_total(minutos, "normal", False)
+
+    # Assert
+    assert resultado == 0.00
+
 # 2. Agregue casos frontera.
 # 3. Agregue entradas inválidas con pytest.raises.
 
