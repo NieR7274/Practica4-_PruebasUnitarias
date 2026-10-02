@@ -34,6 +34,17 @@ def test_caso_Cero_Minutos(sistema):
     # Assert
     assert resultado == 0.00
 
+def test_caso_190_Minutos(sistema):
+
+    # Arrege
+    minutos = 190
+
+    # Act
+    resultado = sistema.calcular_total(minutos, "normal", False)
+
+    # Assert
+    assert resultado == 65.00
+
 # 2. Agregue casos frontera.
 
 def test_caso_Frontera_16_Minutos(sistema):
