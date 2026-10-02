@@ -16,6 +16,9 @@ class Estacionamiento:
         if minutos < 0:
             raise ValueError("Los minutos no pueden ser negativos")
 
+        if minutos != int (minutos):
+            raise ValueError("Los minutos deben ser un numero entero")
+
         if tipo_cliente not in ("normal", "frecuente"):
             raise ValueError("Tipo de cliente no válido")
 
