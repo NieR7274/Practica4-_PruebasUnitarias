@@ -45,6 +45,18 @@ def test_caso_190_Minutos(sistema):
     # Assert
     assert resultado == 65.00
 
+def test_Descuento_Negativo(sistema):
+    # Arrege
+    minutos = 0
+    cliente = "frecuente"
+
+    #Act
+    resultado = sistema.calcular_total(minutos,cliente, False)
+
+    # Assert
+    assert resultado == 0.00
+
+
 # 2. Agregue casos frontera.
 
 def test_caso_Frontera_16_Minutos(sistema):
@@ -160,7 +172,7 @@ def test_Boleto_Perdido_Descuento(sistema):
 
 def test_Descuento_Frecuente(sistema):
 
-    #Arrenge
+    # Arrege
     minutos = 30
     cliente = "frecuente"
 
