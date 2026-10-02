@@ -29,6 +29,18 @@ def test_ejemplo_inicial(sistema):
 # 1. Agregue casos normales.
 # 2. Agregue casos frontera.
 # 3. Agregue entradas inválidas con pytest.raises.
+
+def test_excepcion_Entrada_decimal(sistema):
+
+    # Arrange
+    minutos = 1.1
+
+    # Act & Assert
+    with pytest.raises(ValueError):
+        sistema.calcular_total(minutos, "normal", False)
+
+   
+
 # 4. Agregue casos parametrizados con @pytest.mark.parametrize.
 # 5. Use pytest.approx cuando el resultado esperado tenga decimales.
 # 6. Pruebe interacciones entre reglas.
