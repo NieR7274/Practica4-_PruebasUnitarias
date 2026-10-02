@@ -9,24 +9,19 @@ def sistema():
     """Preparación reutilizable para las pruebas."""
     return Estacionamiento()
 
+# TODO:
+# 1. Agregue casos normales.
 
-def test_ejemplo_inicial(sistema):
-    """
-    Esta prueba sólo sirve como punto de partida.
-    El alumno debe reemplazarla/complementarla con su diseño de casos.
-    """
-    # Arrange
-    minutos = 10
+def test_caso_Intevelo_Gratuito(sistema):
+    # Arrage
+    minutos = 1
 
-    # Act
+    #Act
     resultado = sistema.calcular_total(minutos, "normal", False)
 
     # Assert
     assert resultado == 0.0
 
-
-# TODO:
-# 1. Agregue casos normales.
 # 2. Agregue casos frontera.
 # 3. Agregue entradas inválidas con pytest.raises.
 
