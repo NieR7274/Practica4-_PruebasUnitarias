@@ -157,3 +157,15 @@ def test_Boleto_Perdido_Descuento(sistema):
 
     # Assert
     assert resultado == 300.00
+
+def test_Descuento_Frecuente(sistema):
+
+    #Arrenge
+    minutos = 30
+    cliente = "frecuente"
+
+    # Act
+    resultado = sistema.calcular_total(minutos,cliente, False )
+
+    # Assert
+    assert resultado == 18.00
