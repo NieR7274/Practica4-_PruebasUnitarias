@@ -60,3 +60,14 @@ def test_excepcion_Entrada_Nombre_Invalido(sistema):
 # 4. Agregue casos parametrizados con @pytest.mark.parametrize.
 # 5. Use pytest.approx cuando el resultado esperado tenga decimales.
 # 6. Pruebe interacciones entre reglas.
+
+def test_Boleto_Perdido(sistema):
+
+    # Arrange
+    minutos = 1
+
+    # Act
+    resultado = sistema.calcular_total(minutos, "frecuente", True)
+
+    # Assert
+    assert resultado == 300.00
