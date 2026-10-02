@@ -24,7 +24,7 @@ class Estacionamiento:
 
         if boleto_perdido:
             total = self.TARIFA_BOLETO_PERDIDO
-        elif minutos < 15:
+        elif minutos <= 15:
             total = 0.0
         elif minutos <= 60:
             total = 20.0
