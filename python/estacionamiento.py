@@ -32,7 +32,7 @@ class Estacionamiento:
             horas_adicionales = (minutos - 60) // 60
             total = 20.0 + (horas_adicionales * 15.0)
 
-        if tipo_cliente == "frecuente":
+        if tipo_cliente == "frecuente" and not boleto_perdido:
             total *= 0.90
 
         return round(total, 2)
