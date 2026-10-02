@@ -29,7 +29,7 @@ class Estacionamiento:
         elif minutos <= 60:
             total = 20.0
         else:
-            horas_adicionales = (minutos - 60) // 60
+            horas_adicionales = math.ceil((minutos - 60) / 60)
             total = 20.0 + (horas_adicionales * 15.0)
 
         if tipo_cliente == "frecuente" and not boleto_perdido:
