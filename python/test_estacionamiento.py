@@ -65,6 +65,22 @@ def test_excepcion_Entrada_Nombre_Invalido(sistema):
         sistema.calcular_total(minutos, "anormal", False)
 
 # 4. Agregue casos parametrizados con @pytest.mark.parametrize.
+
+# Casos intervalo gratuito
+@pytest.mark.parametrize("minutos, esperado", [
+    (1, 0.00),    # R1: frontera de $0.00
+    (5, 0.00),    # R2: caso normal
+    (10, 0.00),   # R3: caso normal
+    (15, 0.00),   # R4: frontera de $0.00
+
+])
+def test_casos_frontera_minutos(sistema, minutos, esperado):
+    # Act
+    resultado = sistema.calcular_total(minutos, tipo_cliente="normal", boleto_perdido=False)
+
+    # Assert
+    assert resultado == esperado
+
 # 5. Use pytest.approx cuando el resultado esperado tenga decimales.
 # 6. Pruebe interacciones entre reglas.
 
