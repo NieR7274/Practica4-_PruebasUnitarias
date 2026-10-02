@@ -35,6 +35,18 @@ def test_caso_Cero_Minutos(sistema):
     assert resultado == 0.00
 
 # 2. Agregue casos frontera.
+
+def test_caso_Frontera_16_Minutos(sistema):
+    # Arrege
+    minutos = 16
+
+    # Act
+    resultado = sistema.calcular_total(minutos, "normal", False)
+
+    # Assert
+    assert resultado == 20.00
+
+    
 # 3. Agregue entradas inválidas con pytest.raises.
 
 def test_excepcion_Entrada_decimal(sistema):
