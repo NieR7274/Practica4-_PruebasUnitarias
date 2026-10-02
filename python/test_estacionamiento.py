@@ -39,7 +39,14 @@ def test_excepcion_Entrada_decimal(sistema):
     with pytest.raises(ValueError):
         sistema.calcular_total(minutos, "normal", False)
 
-   
+def test_excepcion_Entrada_negativa(sistema):
+
+    # Arrange
+    minutos = -1
+
+    # Act & Assert
+    with pytest.raises(ValueError):
+        sistema.calcular_total(minutos, "normal", False)
 
 # 4. Agregue casos parametrizados con @pytest.mark.parametrize.
 # 5. Use pytest.approx cuando el resultado esperado tenga decimales.
