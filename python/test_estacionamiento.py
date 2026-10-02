@@ -156,6 +156,19 @@ def test_casos_frontera_minutos(sistema, minutos, esperado):
     assert resultado == esperado
 
 # 5. Use pytest.approx cuando el resultado esperado tenga decimales.
+
+def test_caso_Descuento_Decimal(sistema):
+
+    # Arrege
+    minutos = 90
+    cliente = "frecuente"
+
+    # Act
+    resultado = sistema.calcular_total(minutos,cliente, False)
+
+    # Assert
+    assert resultado == pytest.approx(31.50)
+
 # 6. Pruebe interacciones entre reglas.
 
 def test_Boleto_Perdido_Descuento(sistema):
