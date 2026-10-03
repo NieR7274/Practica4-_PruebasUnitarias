@@ -13,11 +13,13 @@ class Estacionamiento:
         trate esta implementación como un sistema que debe verificarse.
         No asuma que todo lo que hace el código es correcto.
         """
-        if minutos < 0:
-            raise ValueError("Los minutos no pueden ser negativos")
+        
+        if not isinstance(minutos, int) or isinstance(minutos, bool):
+            raise ValueError("Los minutos deben ser un número entero")
 
-        if minutos != int (minutos):
-            raise ValueError("Los minutos deben ser un numero entero")
+        if minutos < 0:
+                    raise ValueError("Los minutos no pueden ser negativos")
+        
 
         if tipo_cliente not in ("normal", "frecuente"):
             raise ValueError("Tipo de cliente no válido")
