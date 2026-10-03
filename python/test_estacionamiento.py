@@ -129,6 +129,15 @@ def test_excepcion_Entrada_negativa(sistema):
     with pytest.raises(ValueError):
         sistema.calcular_total(minutos, "normal", False)
 
+def test_excepcion_Entrada_No_Numerica(sistema):
+
+    # Arrange
+    minutos = "no_numerico"
+
+    # Act & Assert
+    with pytest.raises(ValueError):
+        sistema.calcular_total(minutos, "normal", False)
+
 def test_excepcion_Entrada_Nombre_Invalido(sistema):
 
     # Arrange
