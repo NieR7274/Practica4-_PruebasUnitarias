@@ -1,0 +1,12 @@
+# Carpetas de cache de Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Cache de pytest
+.pytest_cache/
+
+
+# Archivos de configuracion de IDEs
+.vscode/
+.idea/
